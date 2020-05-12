@@ -9,6 +9,7 @@ public class Case_t extends DomainBuilder {
         //personContact(acc.PersonContactId);
         status('New');
         origin('Phone');
+        subject('Test Subject');
     }
 
     public Case_t() {        
@@ -22,6 +23,10 @@ public class Case_t extends DomainBuilder {
     public Case_t origin(string value){
         return (Case_t) set(Case.Origin, value);
     }
+    public Case_t subject(string value){
+        return (Case_t) set(Case.Subject, value);
+    }
+    
     public Case_t personContact(string value){
         return (Case_t) set(Case.ContactId, value);
     }

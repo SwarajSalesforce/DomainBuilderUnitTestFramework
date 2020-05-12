@@ -10,10 +10,10 @@ public class Task_t extends DomainBuilder {
     }
 
      // Test Method HERE, Use Snippet - testbuilderMethod
-    public Task_t name(Contact_t c) {
+    public Task_t name(Contact c) {
         return (Task_t) set(Task.WhoId, c.Id);
     }
-    public Task_t relatedTo(Account_t account){
+    public Task_t relatedTo(Account account){
         return (Task_t) set(Task.WhatId, account.Id);
     }
     public Task_t subject(string value){

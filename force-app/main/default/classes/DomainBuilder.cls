@@ -75,7 +75,6 @@ public abstract class DomainBuilder {
         return set('RecordTypeId', rtId);
     }
 
-
     // PROTECTED
 
     protected DomainBuilder setParent(SObjectField relationship, DomainBuilder parent) {

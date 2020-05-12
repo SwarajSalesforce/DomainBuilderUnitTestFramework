@@ -6,14 +6,14 @@ public class Event_t extends DomainBuilder {
         // Populate Required Fields HERE
         description('testDescription');
         starts(system.today().year(), system.today().month());
-        ends(system.today().year(), system.today().addMonths(3).month());
+        ends(system.today().year(), system.today().addDays(10).month());
     }
 
      // Test Method HERE, Use Snippet - testbuilderMethod
-    public Event_t name(Contact_t c) {
+    public Event_t name(Contact c) {
         return (Event_t) set(Event.WhoId, c.Id);
     }
-    public Event_t relatedTo(Account_t account){
+    public Event_t relatedTo(Account account){
         return (Event_t) set(Event.WhatId, account.Id);
     }
     
